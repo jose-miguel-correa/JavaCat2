@@ -1,9 +1,9 @@
 
 package CAT2;
 
-import javax.swing.JOptionPane;
-import java.util.ArrayList;
-import javax.swing.table.DefaultTableModel;
+//import javax.swing.JOptionPane;
+//import java.util.ArrayList;
+//import javax.swing.table.DefaultTableModel;
 
 public class Formulario extends javax.swing.JFrame {
 
@@ -11,7 +11,7 @@ public class Formulario extends javax.swing.JFrame {
     //    initComponents();
     //}
     
-    ArrayList<Solicitud> misPedidos = new ArrayList<Solicitud>();
+    //ArrayList<Solicitud> misPedidos = new ArrayList<Solicitud>();
     
     public Formulario() {
         initComponents();
@@ -126,7 +126,7 @@ public class Formulario extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        txtFecha.setText("aaaa/mm/dd");
+        txtFecha.setText("yyyy/mm/dd");
 
         lblAdomicilio.setText("A domicilio");
 
@@ -267,13 +267,13 @@ public class Formulario extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(73, 73, 73)
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -284,7 +284,7 @@ public class Formulario extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(11, 11, 11)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -372,7 +372,7 @@ public class Formulario extends javax.swing.JFrame {
             txtNombre.setText(null);
             txtApellido.setText(null);
             txtDireccion.setText(null);
-            txtFecha.setText("aaaa/mm/dd");
+            txtFecha.setText("yyyy/mm/dd");
             cmbTipoPack.getSelectedItem();
             cmbTipoPack.setSelectedIndex(0);
             cmbCantidad.getSelectedItem();

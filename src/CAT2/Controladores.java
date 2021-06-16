@@ -109,7 +109,7 @@ public class Controladores implements ActionListener{
             frm.txtNombre.setText(null);
             frm.txtApellido.setText(null);
             frm.txtDireccion.setText(null);
-            frm.txtFecha.setText("2021/01/01");
+            frm.txtFecha.setText("yyyy/mm/mm");
             frm.cmbTipoPack.getSelectedItem();
             frm.cmbTipoPack.setSelectedIndex(0);
             frm.cmbCantidad.getSelectedItem();
