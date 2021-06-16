@@ -47,25 +47,29 @@ public class Controladores implements ActionListener{
             
             frm.rdoNo.setActionCommand("No");
             frm.rdoSi.setActionCommand("Si");
+//            frm.cmbCantidad.setSelectedIndex(1);
+//            frm.cmbCantidad.setSelectedIndex(2);
+//            frm.cmbCantidad.setSelectedIndex(3);
+            
             
             int adomicilio = 0, valor_lavado = 0, total = 0;
             
             
             if(frm.cmbTipoPack.getSelectedItem().equals("Carga Básica: Hasta 8 Kg.")) {
-                valor_lavado = 7500;
+                valor_lavado = 7500*(Integer.parseInt((frm.cmbCantidad.getSelectedItem().toString())));
             }
             else if(frm.cmbTipoPack.getSelectedItem().equals("Carga Media: 9 Kg. - 12 Kg.")) {
-                valor_lavado = 9990;     
+                valor_lavado = 9990*(Integer.parseInt((frm.cmbCantidad.getSelectedItem().toString())));     
             }
             else if(frm.cmbTipoPack.getSelectedItem().equals("Carga Full: 13 Kg. - 16 Kg.")) {
-                valor_lavado = 12990;     
+                valor_lavado = 12990*(Integer.parseInt((frm.cmbCantidad.getSelectedItem().toString())));     
             }
                     
             if (frm.rdoSi.isSelected())
                     {
                         valor_lavado = valor_lavado + 1750;
                     }
-            
+                        
             total = valor_lavado;
             
                        
@@ -105,7 +109,7 @@ public class Controladores implements ActionListener{
             frm.txtNombre.setText(null);
             frm.txtApellido.setText(null);
             frm.txtDireccion.setText(null);
-            frm.txtFecha.setText(null);
+            frm.txtFecha.setText("2021/01/01");
             frm.cmbTipoPack.getSelectedItem();
             frm.cmbTipoPack.setSelectedIndex(0);
             frm.cmbCantidad.getSelectedItem();
