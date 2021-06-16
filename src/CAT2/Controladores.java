@@ -3,12 +3,12 @@ package CAT2;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.AbstractButton;
+//import javax.swing.AbstractButton;
 import javax.swing.JOptionPane;
-import javax.swing.ButtonModel;
-import javax.swing.JRadioButton;
-import javax.swing.ButtonGroup;
-import java.util.Enumeration;
+//import javax.swing.ButtonModel;
+//import javax.swing.JRadioButton;
+//import javax.swing.ButtonGroup;
+//import java.util.Enumeration;
 
 public class Controladores implements ActionListener{
     
@@ -47,6 +47,27 @@ public class Controladores implements ActionListener{
             
             frm.rdoNo.setActionCommand("No");
             frm.rdoSi.setActionCommand("Si");
+            
+            int adomicilio = 0, valor_lavado = 0, total = 0;
+            
+            
+            if(frm.cmbTipoPack.getSelectedItem().equals("Carga Básica: Hasta 8 Kg.")) {
+                valor_lavado = 7500;
+            }
+            else if(frm.cmbTipoPack.getSelectedItem().equals("Carga Media: 9 Kg. - 12 Kg.")) {
+                valor_lavado = 9990;     
+            }
+            else if(frm.cmbTipoPack.getSelectedItem().equals("Carga Full: 13 Kg. - 16 Kg.")) {
+                valor_lavado = 12990;     
+            }
+                    
+            if (frm.rdoSi.isSelected())
+                    {
+                        valor_lavado = valor_lavado + 1750;
+                    }
+            
+            total = valor_lavado;
+            
                        
         mod.setId_pedido(frm.txtId.getText());
             mod.setNombre_cliente(frm.txtNombre.getText());
@@ -56,9 +77,8 @@ public class Controladores implements ActionListener{
                             mod.setTipo_pack((frm.cmbTipoPack.getSelectedItem().toString()));
                                 mod.setCantidad(Integer.parseInt((frm.cmbCantidad.getSelectedItem().toString())));
                                     mod.setA_domicilio(frm.buttonGroup1.getSelection().getActionCommand());
-                                        mod.setTotal(Integer.parseInt(frm.txtTotal.getText()));
-                                        
-                                        
+                                        mod.setTotal(total);
+                                                                               
                                         
         if(modC.registrar(mod)) {
             JOptionPane.showMessageDialog(null, "Registro Guardado");
@@ -92,7 +112,7 @@ public class Controladores implements ActionListener{
             frm.cmbCantidad.setSelectedIndex(0);
             frm.rdoNo.setSelected(false);
             frm.rdoSi.setSelected(false);
-            frm.txtTotal.setText(null);
+            //frm.txtTotal.setText(null);
 //            this.cmbTipoLavado.getSelectedItem();
 //            this.radCargoAdicional.setSelected(false);
 //            this.cmbTipoLavado.setSelectedIndex(0);
