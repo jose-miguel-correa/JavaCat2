@@ -9,10 +9,10 @@ import java.util.logging.Logger;
 
 public class Conexion {
     
-    private final String base = "cat2";
+    private final String base = "mibase";
     private final String user = "root";
-    private final String password = "";
-    private final String url = "jdbc:mysql://localhost/" + base;
+    private final String password = "1234";
+    private final String url = "jdbc:mysql://localhost:3306/" + base;
     private Connection con = null;
     
     public Connection getConexion() {
